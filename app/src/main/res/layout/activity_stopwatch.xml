@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.soongsil.example.ui.activity.MainActivity">
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="70dp"
+        android:textSize="60dp" />
+    <LinearLayout
+        android:id="@+id/stopwatch_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/chronometer"
+        android:layout_marginTop="300dp">
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:backgroundTint="#83BCFD"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:backgroundTint="#83BCFD"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:enabled="false"/>
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:backgroundTint="#83BCFD"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/stopwatch_ll"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="155dp"
+        android:text="Home"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#83BCFD"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:enabled="true"
+        android:icon="@drawable/selector_home_icon"
+        android:title="홈화면"/>
+    <item
+        android:id="@+id/nav_feed"
+        android:enabled="true"
+        android:icon="@drawable/selector_feed_icon"
+        android:title="피드"/>
+
+    <item
+        android:id="@+id/nav_gallery"
+        android:enabled="true"
+        android:icon="@drawable/selector_gallery_icon"
+        android:title="갤러리"/>
+    <item
+        android:id="@+id/nav_infor"
+        android:enabled="true"
+        android:icon="@drawable/selector_information_icon"
+        android:title="정보"/>
+</menu>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.CalendarFragment">
+
+    <CalendarView
+        android:id="@+id/calendarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/home_ll_1"/>
+
+<!--    시계랑 플러스 아이콘 넣는 법 알아보기!-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/calendarview"
+        app:layout_constraintBottom_toTopOf="@id/home_ll_">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:borderWidth="0dp"
+            android:backgroundTint="#83BCFD"
+            android:foreground="@drawable/add_training_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="50dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home_stopwatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:borderWidth="0dp"
+            android:backgroundTint="#83BCFD"
+            android:foreground="@drawable/stopwatch_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="50dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/home_ll_"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/home_ll_1"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
